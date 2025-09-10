@@ -4,5 +4,5 @@ Task
 Given a positive number, determine if it is Automorphic or not. If it is, return "Automorphic", 
 otherwise return "Not!!" */
 const automorphic=n=>{
-  return (n**2).toString().endsWith(n)?'Automorphic':'Not!!'
+  return (n**2).toString().endsWith(n)?'Automorphic':'Not!'
 }
