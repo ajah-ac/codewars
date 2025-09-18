@@ -1,0 +1,14 @@
+/*Decode the strings.
+In Javascript each character has its own unique unicode number, for example:
+a = 97
+A = 65
+1 = 49
+Your function accepts unicode numbers, you need to create a function that decodes these numbers and returns the correct string.
+
+If the input includes elements that are not numbers your code needs to ingnore those elements and move onto the next value.
+
+If the input includes no valid numbers your function should return "not a valid character code". */
+const uniDecoder=(...codes)=>{
+ const filtered=codes.filter(x=>typeof x==='number').map(x=>String.fromCharCode(x)).join('')
+ return codes.every(x=>typeof x==='string')?'not a valid character code':filtered
+}
