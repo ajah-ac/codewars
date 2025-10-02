@@ -6,9 +6,7 @@ You will be given a number and you will need to return it as a string in Expande
 70304 --> "70000 + 300 + 4"
 NOTE: All numbers will be whole numbers greater than 0.
  */
-const expandedForm=num=> {
-  const nums=[...String(num)]
-return nums.filter(x=>x!=='0').map(x=>x.padEnd((nums.length-(nums.indexOf(x))),0)).join(' + ')
-
-
-}
+const expandedForm = num => {
+  const nums = [...String(num)];
+  return nums.map((digit, i) => digit + '0'.repeat(nums.length - i - 1)) .filter(val => !/^0+$/.test(val)).join(' + ');
+};
