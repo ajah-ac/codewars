@@ -8,5 +8,5 @@ NOTE: All numbers will be whole numbers greater than 0.
  */
 const expandedForm = num => {
   const nums = [...String(num)];
-  return nums.map((digit, i) => digit + '0'.repeat(nums.length - i - 1)) .filter(val => !/^0+$/.test(val)).join(' + ');
+  return nums.map((digit, i) => digit + '0'.repeat(nums.length - i - 1)) .filter(num=>Number(num)!==0).join(' + ');
 };
