@@ -3,7 +3,7 @@ Example:
 
 var l = [1,2,3]
 SumSquares(l) == 14
-
+summ
 var l = [[1,2],3]
 SumSquares(l) == 14
 
