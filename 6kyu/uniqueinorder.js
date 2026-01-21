@@ -5,17 +5,3 @@ For example:
 uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
 uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 uniqueInOrder([1,2,2,3,3])       == [1,2,3]*/
-const uniqueInOrder=function(iterable){
-const array=[]
-for(let i=0;i<iterable.length;i++){
-  if(i===0)array.push(iterable[i])
-  else{
-    if(iterable[i]!==iterable[i-1])
-      {
-        array.push(iterable[i])
-      }
-  }
-}
-  return array
-}
-console.log(uniqueInOrder(['A','B','C','d','d','D']))
