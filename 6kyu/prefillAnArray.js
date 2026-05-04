@@ -21,11 +21,11 @@ Code Examples
       
     prefill("xyz", 1)
       --> throws TypeError with message "xyz is invalid" */
-      const prefill=(n, v)=> {
-  if(isNaN(n) || n<0 || !isFinite(n) || !Number.isInteger(+n) || typeof n=='boolean' ){
-    throw new TypeError(`${n} is invalid`)
+const prefill = (n, v) => {
+    if (isNaN(n) || n < 0 || !isFinite(n) || !Number.isInteger(+n) || typeof n == 'boolean') {
+        throw new TypeError(`${n} is invalid`)
 
-  }
+    }
 
-  return +n===0?[]:new Array(n).fill(v)
+    return +n === 0 ? [] : new Array(n).fill(v)
 }
